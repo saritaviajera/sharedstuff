@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moin from Hamburg!</title>
+    <link
+      rel="icon"
+      href="https://www.hamburg.de/contentblob/109910/defa9bbb5c4e3552e6c92d7feab81414/data/hamburg-symbol-148x191.gif"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+          180.3deg,
+          rgb(221, 221, 221) 5.5%,
+          rgb(110, 136, 161) 90.2%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: #003e67;
+        font-weight: bold;
+        margin: 0 100px auto;
+        font-size: xx-large;
+        padding: 30px 30px 15px 30px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        margin: 15px 125px auto;
+        color: #003e67;
+      }
+      img {
+        display: block;
+        margin: 0px auto;
+        border-radius: 10px;
+        width: 75%;
+        border-color: aliceblue;
+      }
+      hr {
+        margin: 10px 300px;
+        color: #003e67;
+      }
+      li {
+        list-style: none;
+      }
+      span {
+        display: block;
+        text-align: center;
+        color: #003e67;
+        line-height: 25px;
+        margin: 5px 125px auto;
+      }
+      .btn-group button {
+        background-color: #003e6778;
+        height: 100px;
+        width: 100px;
+        border: 2px solid;
+        border-radius: 5px;
+        margin: 1.5px;
+        color: aliceblue;
+        padding: 5px 20px;
+        float: left;
+      }
+      .btn-group button:not(:last-child) {
+        border-right: none;
+      }
+      .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .btn-group button:hover {
+        cursor: pointer;
+      }
+      .link {
+        text-decoration: none;
+        font-weight: bold;
+        color: #003e6778;
+      }
+      .link:hover {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      .HamburgFacts {
+        text-align: center;
+        display: block;
+        color: #003e67;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px;
+      }
+      .footer {
+        text-align: center;
+        font-size: smaller;
+        color: #003e67;
+      }
+      #snow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="snow" style="width: 100%; height: 100%"> </canvas>
+    <div class="container">
+      <h1>⚓️ MOIN! ⚓️</h1>
+      <img
+        src="https://www.hamburg-convention.com/wp-content/uploads/2021/03/Lichterherz-auf-der-Elbphilharmonie.jpg"
+        alt="Elphi"
+        id="picture1"
+      />
+      <h2>
+        HAMBURG <br />
+        also know as
+        <a
+          href="https://berlinspectator.com/2022/07/16/hamburg-germanys-stunning-northern-beauty-6/"
+          target="_blank"
+          class="link"
+          >the gateway to the world</a
+        >
+        due to famous
+        <strong>Hamburg Port</strong> is my hometown and one of the most
+        beautiful cities in the world.
+      </h2>
+      <span>
+        <p>
+          What's so good about this city, that even
+          <a
+            href="https://www.hamburg.de/kultur/1525822/beatles-in-hamburg-geschichte/"
+            target="_blank"
+            class="link"
+            >The Beatles</a
+          >
+          started their career here?<br />
+          Let me tell you: <br />
+          There are more than 2.500 bridges in Hamburg. Tiny bridges, huge
+          bridges, for pedestrians and cars... that's even more than in
+          Venice!<br />
+          Did you know you can visit the worlds largest miniature train
+          exhibition, called
+          <a
+            href="https://www.miniatur-wunderland.de/"
+            target="_blank"
+            class="link"
+            >Minaturwunderland </a
+          >in Hamburg? <br />
+          We have an old warehouse turned into an opera house. How wild is that?
+          <br />
+          Our
+          <a
+            href="https://www.elbphilharmonie.de/en/the-halls"
+            target="_blank"
+            class="link"
+          >
+            Elphi (Elbphilharmonie)</a
+          >
+          is one of the newest additions to Hamburg's amazing harbour panorama!
+          See the beauty herself in the picture above.
+          <br />
+          <br />
+          Last but not least, in Hamburg we say <strong>Moin</strong> instead of
+          Hello. <br />
+
+          What does Moin mean you ask? Find out
+          <a
+            href="https://www.iamexpat.de/education/education-news/german-words-expats-should-know-moin"
+            target="_blank"
+            class="link"
+            >here.</a
+          >
+          <br />
+          And if you already speak a little german;<br />
+          <a
+            href="https://geheimtipphamburg.de/geheimtipp/moin-der-kleine-knigge-zum-schoensten-gruss-der-welt/"
+            target="_blank"
+            class="link"
+            >this Moin</a
+          ><br />
+          goes straight from my heart to yours! 💙⚓️
+        </p>
+        <hr />
+        <a
+          href="https://wub-event.de/buchhandlungen"
+          target="_blank"
+          class="HamburgFacts"
+        >
+          Convinced that Hamburg is a wonderful place to visit? <br />
+          Plan your trip to Hamburg now:
+        </a>
+        <div class="btn-group" style="width: 100%">
+          <button style="width: 24%" id="train">
+            book your train to Hamburg
+          </button>
+          <button style="width: 24%" id="hotel">book a hotel in Hamburg</button>
+          <button style="width: 24%" id="activities">
+            find activities in Hamburg
+          </button>
+          <button style="width: 24%" id="guide">find local guides</button>
+        </div>
+      </span>
+      <p class="footer">
+        This page was built by Sara <br />
+        <a
+          href="https://www.instagram.com/saritaviajera/"
+          target="_blank"
+          class="link"
+          >@saritaviajera</a
+        >
+        <br />
+        November 2022
+      </p>
+    </div>
+    <script>
+      src = "index.js";
+      const canvas = document.getElementById("snow");
+      var ctx = canvas.getContext("2d");
+      const makeSnowflake = () => {
+        let x = Math.floor(Math.random() * canvas.width) + 1;
+        let y = (Math.floor(Math.random() * 10) + 1) * -1;
+        const draw = (ctx) => {
+          ctx.fillStyle = "rgb(255, 255, 255)";
+          ctx.fillRect(x, y, 2, 2);
+        };
+        const update = () => {
+          y++;
+          x += Math.random() > 0.5 ? 1 : -1;
+        };
+        const getX = () => {
+          return x;
+        };
+        const getY = () => {
+          return y;
+        };
+        return {
+          getX,
+          getY,
+          update,
+          draw,
+        };
+      };
+      const snowflakes = [];
+      const draw = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const snowflake of snowflakes) {
+          snowflake.draw(ctx);
+          snowflake.update();
+        }
+      };
+      const makeSnowflakes = () => {
+        for (let i = 0; i < 10; i++) {
+          snowflakes.push(makeSnowflake());
+        }
+      };
+      const removeSnowflakesThatHaveFallenOffScreen = () => {
+        for (let i = 0; i < snowflakes.length; i++) {
+          if (snowflakes[i].getY() > canvas.height) {
+            snowflakes[i] = undefined;
+          }
+        }
+        snowflakes = snowflakes.filter((snowflake) => snowflake !== undefined);
+      };
+      setInterval(draw, 30);
+      setInterval(removeSnowflakesThatHaveFallenOffScreen, 1000);
+
+      function bookTrain() {
+        const name = prompt(
+          "Moin! We can't wait to welcome you to our lovely hometown! What's your name?"
+        );
+        const likeWinter = prompt("Okay, " + name + " and do you like winter?")
+          .toLowerCase()
+          .trim();
+        if (likeWinter.includes("no")) {
+          alert(
+            "Hm. It's pretty cold in Hamburg already, " +
+              name +
+              "! Maybe you should come in summer!"
+          );
+          const picture = document.getElementById("picture1");
+          picture.src =
+            "https://www.24hamburg.de/bilder/2021/12/20/91191204/27737848-ein-foto-der-hamburger-hafencity-im-winter-20w5oVwHyzfe.jpg";
+          setInterval(makeSnowflakes, 1000);
+        } else {
+          alert("great! let's book a train to Hamburg!");
+          window.open("https://www.bahn.de/");
+        }
+      }
+
+      function bookHotel() {
+        const bookedTrain = prompt("Have you booked your train, yet?")
+          .toLowerCase()
+          .trim();
+        if (bookedTrain.includes("no")) {
+          alert(
+            "Maybe it's better to arrange when you'll arrive in Hamburg first. Klick on book your train to Hamburg first."
+          );
+        } else {
+          alert("nice! Then let's book you a hotel!");
+          window.open("https://www.booking.com/");
+        }
+      }
+      function findActivities() {
+        const bookedHaA = prompt("Have you booked your train & hotel, yet?")
+          .toLowerCase()
+          .trim();
+        if (bookedHaA.includes("no")) {
+          alert(
+            "Well, let's better check when you'll arive in Hamburg first, right? Klick on book your train to Hamburg first."
+          );
+        } else {
+          alert("nice! Then let's book you a hotel!");
+          window.open("https://www.booking.com/");
+        }
+      }
+      function findGuide() {
+        const bookedAll = prompt(
+          "So, you got the dates & hotel booked, I assume?"
+        )
+          .toLowerCase()
+          .trim();
+        if (bookedAll.includes("no")) {
+          alert(
+            "Well, I really think you should book your travel & accomodation first! Klick on book your train to Hamburg first."
+          );
+        } else {
+          alert(
+            "Alrighty, just one step missing to make your trip to Hamburg perfect! Are you ready?"
+          );
+          window.open("https://www.getyourguide.de/hamburg-l23/");
+        }
+      }
+      const hotel = document.getElementById("hotel");
+      hotel.addEventListener("click", bookHotel);
+      const bahn = document.getElementById("train");
+      bahn.addEventListener("click", bookTrain);
+      const activities = document.getElementById("activities");
+      activities.addEventListener("click", findActivities);
+      const guide = document.getElementById("guide");
+      guide.addEventListener("click", findGuide);
+    </script>
+  </body>
+</html>
